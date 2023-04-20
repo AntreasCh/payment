@@ -85,8 +85,8 @@ async def create_checkout_session(cart: Cart, user_id: int):
         metadata={"customer_id": user_id, "cart": json.dumps(cart.dict())},
         line_items=line_items,
         mode="payment",
-        success_url="http://localhost:3000/final/checkout-success",
-        cancel_url="http://localhost:3000/final/Cart",
+        success_url="http://unn-w20015975.newnumyspace.co.uk/python/checkout-success",
+        cancel_url="http://unn-w20015975.newnumyspace.co.uk/python/Cart",
     )
 
     return {"url": session.url}
